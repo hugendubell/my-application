@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="0dp"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/party_Image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chick"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"/>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical">
+
+
+
+        <TextView
+            android:id="@+id/party_name"
+            android:text="name of party"
+            android:layout_weight="8"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        
+        <ImageView
+            android:id="@+id/btnShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tint="@color/colorAccent"
+            android:src="@drawable/ic_share_black_24dp"/>
+            <ImageView
+                android:id="@+id/btnFav"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/colorAccent"
+                android:src="@drawable/ic_heart"/>
+    </LinearLayout>
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/party_price"
+            android:text="100 NIS"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+</LinearLayout>
+
+</android.support.v7.widget.CardView>

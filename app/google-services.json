@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "733811604937",
+    "firebase_url": "https://thepool-124cc.firebaseio.com",
+    "project_id": "thepool-124cc",
+    "storage_bucket": "thepool-124cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733811604937:android:22bf7d225636dc89",
+        "android_client_info": {
+          "package_name": "com.example.pools"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733811604937-54bdg6f6oa63jcu9hpct72on1dei9nuo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3rkPOZn02uNKNrZ_2MNuh8276CVa0Sl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733811604937-54bdg6f6oa63jcu9hpct72on1dei9nuo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
