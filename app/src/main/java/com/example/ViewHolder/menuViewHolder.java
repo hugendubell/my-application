@@ -14,6 +14,7 @@ public class menuViewHolder extends RecyclerView.ViewHolder implements View.OnCl
 public TextView txtMenuName;
 public ImageView imageView;
 
+
 private ItemClickListener itemClickListener;
 
     public menuViewHolder(@NonNull View itemView) {

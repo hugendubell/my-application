@@ -27,5 +27,19 @@
         <item name ="android:textColor">@color/white</item>
         <item name ="android:textStyle">normal</item>
     </style>
+    <!--Rating Dialog-->
+    <style name="RatingDialogStyle" parent="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog">
+
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:fontFamily">"@font/bad_script"</item>
+
+
+    </style>
+    <style name ="RatingDialogFadeAnim">
+
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
 
 </resources>

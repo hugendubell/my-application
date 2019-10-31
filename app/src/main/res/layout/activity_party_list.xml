@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/overlayBackground"
     tools:context=".PartyList">
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/list_toolbar"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:fitsSystemWindows="true"
+            tools:ignore="MissingConstraints"
+            android:backgroundTint="@color/black"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/berkshire_swash"
+                android:text="Make your choice..."
+
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </android.support.v7.widget.Toolbar>
 
 <com.mancj.materialsearchbar.MaterialSearchBar
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="5dp"
     android:id="@+id/searchBar"
-    android:layout_alignParentTop ="true"
+
+    android:layout_below="@+id/list_toolbar"
     android:elevation="5dp"
     app:mt_speechMode ="false"
     app:mt_hint="Enter your party"
@@ -30,6 +64,6 @@
         android:id="@+id/recycler_party"
         android:scrollbars="vertical"/>
 
+    </RelativeLayout>
 
-
-</RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,11 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Cart"></activity>
-        <activity android:name=".PartyDetails"></activity>
-        <activity
-            android:name=".PartyList"
-             />
+        <activity android:name=".FullScreenGalleryActivity"></activity>
+        <activity android:name=".Gallery" />
+        <activity android:name=".AboutUs" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".PartyDetails" />
+        <activity android:name=".PartyList" />
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"
@@ -35,6 +46,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.facebookContentProvider623405941503013"
+            android:exported="true" />
+
+        <provider
+            android:authorities="com.example.pools.fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions= "true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths"/>
+        </provider>
     </application>
 
 </manifest>

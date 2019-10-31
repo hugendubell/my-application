@@ -33,14 +33,14 @@
             android:gravity="center_vertical">
 
 
-
-        <TextView
-            android:id="@+id/party_name"
-            android:text="name of party"
-            android:layout_weight="8"
-            android:textSize="20sp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/party_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:fontFamily="@font/architects_daughter"
+                android:text="name of party"
+                android:textSize="20sp" />
         
         <ImageView
             android:id="@+id/btnShare"
@@ -49,21 +49,27 @@
             android:layout_weight="1"
             android:tint="@color/colorAccent"
             android:src="@drawable/ic_share_black_24dp"/>
+
             <ImageView
                 android:id="@+id/btnFav"
+
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:tint="@color/colorAccent"
                 android:src="@drawable/ic_heart"/>
+
+
     </LinearLayout>
+
         <TextView
-            android:layout_margin="10dp"
             android:id="@+id/party_price"
-            android:text="100 NIS"
-            android:textSize="17sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/architects_daughter"
+            android:text="100 NIS"
+            android:textSize="17sp" />
 </LinearLayout>
 
 </android.support.v7.widget.CardView>

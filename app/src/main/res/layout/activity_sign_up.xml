@@ -7,13 +7,15 @@
     tools:context=".SignUp"
     android:background="@drawable/empty">
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="111dp"
         android:layout_height="52dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/bad_script"
         android:text="Sign Up"
         android:textAlignment="center"
         android:textColor="@android:color/white"
@@ -21,29 +23,30 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="79dp"
         android:layout_height="93dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="164dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.988"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
-
 
     <info.hoang8f.widget.FButton
         android:id="@+id/btnRegister"
         android:layout_width="386dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
 
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:layout_weight="1"
+        android:fontFamily="@font/bad_script"
         android:text="Sign Up"
         android:textColor="@android:color/white"
         app:buttonColor="@color/btnSignUps"
@@ -51,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edtSecureCode"
         app:layout_constraintVertical_bias="0.952"
         app:shadowColor="@android:color/black" />
 
@@ -60,9 +63,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
+        android:fontFamily="@font/annie_use_your_telescope"
         android:hint="Enter your name"
         android:inputType="textPersonName"
         android:textColor="@android:color/white"
@@ -77,9 +81,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
+        android:fontFamily="@font/annie_use_your_telescope"
         android:hint="Enter your phone number"
         android:inputType="phone"
         android:textColorHint="@color/white"
@@ -93,16 +98,35 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
-        android:hint="Enter password"
-        android:textColorHint="@color/white"
         android:ems="10"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:hint="Enter password"
         android:inputType="numberPassword"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtName" />
+
+    <EditText
+        android:id="@+id/edtSecureCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:hint="Enter Secure code (3 digit)"
+        android:inputType="text"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
 
 
 </android.support.constraint.ConstraintLayout>

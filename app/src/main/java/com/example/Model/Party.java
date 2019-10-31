@@ -1,17 +1,19 @@
 package com.example.Model;
 
 public class Party {
-    private String Name,Image,Description,Price,PartyId;
+    private String Name,Image,Description,Price,PartyId,Address,ImageMap;
 
     public Party() {
     }
 
-    public Party(String name, String image, String description, String price, String partyId) {
+    public Party(String name, String image, String description, String price, String partyId, String address, String imageMap) {
         Name = name;
         Image = image;
         Description = description;
         Price = price;
         PartyId = partyId;
+        Address = address;
+        ImageMap = imageMap;
     }
 
     public String getName() {
@@ -52,5 +54,21 @@ public class Party {
 
     public void setPartyId(String partyId) {
         PartyId = partyId;
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
+
+    public String getImageMap() {
+        return ImageMap;
+    }
+
+    public void setImageMap(String imageMap) {
+        ImageMap = imageMap;
     }
 }

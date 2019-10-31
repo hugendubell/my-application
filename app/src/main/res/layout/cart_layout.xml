@@ -6,47 +6,95 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardElevation="4dp">
-    
+
+    <RelativeLayout
+        android:id="@+id/view_background"
+        android:layout_margin="8dp"
+        android:background="@color/bgRowBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:src="@drawable/ic_delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/delete_icon"
+            android:text="Delete"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
     <LinearLayout
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+
+        android:id="@+id/view_foreground"
+        android:background="@color/white"
+        android:layout_margin="8dp"
         android:orientation="horizontal"
         android:layout_gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
+
+        <ImageView
+
+            android:id="@+id/cart_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+
+            />
         <LinearLayout
+            android:layout_marginRight="10dp"
             android:orientation="vertical"
             android:layout_weight="9"
             android:layout_width="0dp"
             android:layout_height="wrap_content">
 
+
             <TextView
-                android:id="@+id/cart_item_name"
+                android:id="@+id/cartItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
+                android:fontFamily="@font/annie_use_your_telescope"
                 android:gravity="center_vertical|start"
-                android:textAllCaps="true"
-                android:textStyle="bold"
+                android:textSize="18dp"
                 android:text="Party 01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:id="@+id/cart_item_Price"
-                android:layout_marginLeft="10dp"
-                android:gravity="center_vertical|start"
                 android:textAllCaps="true"
-                android:textStyle="italic"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/cartItemPrice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:gravity="center_vertical|start"
                 android:text="150"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textAllCaps="true"
+                android:layout_gravity="right"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/cartItemCount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:gravity="center_vertical|start"
+                android:text="1"
+                android:textAllCaps="true"
+                android:textStyle="italic" />
         </LinearLayout>
-        
-        <ImageView
-            android:layout_gravity="center_vertical|end"
-            android:layout_marginRight="16dp"
-            android:id="@+id/cart_item_count"
-            android:layout_width="20dp"
-            android:layout_height="20dp" />
+
 
 
     </LinearLayout>

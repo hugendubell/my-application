@@ -14,15 +14,26 @@
 
 
 
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="right"
+        android:src="@drawable/logo"
+
+
+        />
     <TextView
+
         android:id="@+id/txtFulLName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/architects_daughter"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="Johnny"
-        android:textColor="@color/white"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white" />
 
 
 </LinearLayout>

@@ -11,11 +11,21 @@
         <item
             android:id="@+id/gallery"
             android:icon="@drawable/ic_gallery"
-            android:title="@string/menu_gallery" />
+            android:title= "@string/menu_gallery"
+            android:fontFamily="@font/bad_script" />
+
         <item
-            android:id="@+id/orders"
-            android:icon="@drawable/ic_orders"
-            android:title="My parties" />
+            android:id="@+id/MyCart"
+            android:icon="@drawable/ic_cart"
+            android:title="My party cart" />
+        <item
+            android:id="@+id/changePass"
+            android:icon="@drawable/ic_security"
+            android:title="Change Password" />
+        <item
+            android:id="@+id/abouts"
+            android:icon="@drawable/ic_import_contacts_black_24dp"
+            android:title="about us" />
         <item
             android:id="@+id/signOut"
             android:icon="@drawable/ic_exit"

@@ -18,20 +18,20 @@
             android:src="@drawable/chick"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-        
+
         <TextView
             android:id="@+id/menu_name"
-            android:text="name of menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="casual"
             android:gravity="center"
+            android:text="name of menu"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="35sp"
-            android:layout_gravity="center_vertical"
-            android:layout_centerInParent="true"
-
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textStyle="bold"
+            android:textSize="35sp" />
     </RelativeLayout>
 
 </android.support.v7.widget.CardView>
