@@ -127,6 +127,7 @@ public class SignIn extends AppCompatActivity {
                 builder.setTitle("Forgot Password");
                 builder.setMessage("Enter your secure code");
 
+
         LayoutInflater inflater = this.getLayoutInflater();
         View forgot_view = inflater.inflate(R.layout.forgot_password_layout,null);
 

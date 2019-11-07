@@ -26,6 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Welcome to Poolz"
+
                 android:textColor="@color/white"
                 android:fontFamily="@font/bad_script"
                 android:textSize="15sp" />
@@ -40,6 +41,7 @@
             android:fontFamily="@font/bad_script"
             android:text="Where would you like to party?"
             android:textColor="@color/white"
+
             android:textSize="25sp" />
 
 

@@ -201,6 +201,8 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
+
+
                     <ImageView
                         android:id="@+id/party_mapLoc"
                         android:layout_width="285dp"

@@ -119,54 +119,7 @@ public class Home extends AppCompatActivity
         database = FirebaseDatabase.getInstance();
         Area = database.getReference("Area");
 
-        Paper.init(this);
 
-
-
-        FloatingActionButton payFab =(FloatingActionButton) findViewById(R.id.payFab);
-        payFab.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent cartList = new Intent(Home.this,CartActivity.class);
-                startActivity(cartList);
-
-            }
-
-        });
-
-
-
-
-
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
-
-        //SET NAME FOR USER
-        View headerView = navigationView.getHeaderView(0);
-        txtFulLName = (TextView)headerView.findViewById(R.id.txtFulLName);
-        txtFulLName.setText("Welcome " +  Common.currentUser.getName());
-
-        //LOAD MENU
-
-        recycler_menu = (RecyclerView)findViewById(R.id.recycler_menu);
-        //LayoutAnimationController controller = AnimationUtils.loadLayoutAnimation(recycler_menu.getContext(),
-               // R.anim.layout_fall_down);
-        //recycler_menu.setLayoutAnimation(controller);
-        recycler_menu.setHasFixedSize(true);
-        //layoutManager = new LinearLayoutManager(this);
-        //recycler_menu.setLayoutManager(layoutManager);
-        recycler_menu.setLayoutManager(new GridLayoutManager(this,2));
-
-
-
-    }
-
-    private void loadMenu() {
         FirebaseRecyclerOptions<Area> options = new FirebaseRecyclerOptions.Builder<Area>()
                 .setQuery(Area,Area.class)
                 .build();
@@ -204,10 +157,70 @@ public class Home extends AppCompatActivity
                 });
             }
         };
+
+
+
+        Paper.init(this);
+
+
+
+        FloatingActionButton payFab =(FloatingActionButton) findViewById(R.id.payFab);
+        payFab.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cartList = new Intent(Home.this,CartActivity.class);
+                startActivity(cartList);
+
+            }
+
+        });
+
+
+
+
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
+
+        //SET NAME FOR USER
+        View headerView = navigationView.getHeaderView(0);
+        txtFulLName = (TextView)headerView.findViewById(R.id.txtFulLName);
+        txtFulLName.setText("Welcome " +  Common.currentUser.getName());
+
+        //LOAD MENU
+
+        recycler_menu = (RecyclerView)findViewById(R.id.recycler_menu);
+
+
+        //recycler_menu.setHasFixedSize(true);
+        //layoutManager = new LinearLayoutManager(this);
+        //recycler_menu.setLayoutManager(layoutManager);
+        recycler_menu.setLayoutManager(new GridLayoutManager(this,2));
+        LayoutAnimationController controller = AnimationUtils.loadLayoutAnimation(recycler_menu.getContext(),
+                R.anim.layout_falldown);
+        recycler_menu.setLayoutAnimation(controller);
+
+
+
+    }
+
+    private void loadMenu() {
+
+
+
         adapter.startListening();
         recycler_menu.setAdapter(adapter);
 
         swipeRefreshLayout.setRefreshing(false);
+
+        //Animation
+        recycler_menu.getAdapter().notifyDataSetChanged();
+        recycler_menu.scheduleLayoutAnimation();
     }
 
     @Override

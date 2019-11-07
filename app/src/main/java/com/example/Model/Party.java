@@ -1,12 +1,13 @@
 package com.example.Model;
 
 public class Party {
-    private String Name,Image,Description,Price,PartyId,Address,ImageMap;
+    private String Name, Image, Description, Price, PartyId, Address, ImageMap;
+    private double latitude, longitude;
 
     public Party() {
     }
 
-    public Party(String name, String image, String description, String price, String partyId, String address, String imageMap) {
+    public Party(String name, String image, String description, String price, String partyId, String address, String imageMap, double latitude, double longitude) {
         Name = name;
         Image = image;
         Description = description;
@@ -14,6 +15,8 @@ public class Party {
         PartyId = partyId;
         Address = address;
         ImageMap = imageMap;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public String getName() {
@@ -70,5 +73,21 @@ public class Party {
 
     public void setImageMap(String imageMap) {
         ImageMap = imageMap;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 }

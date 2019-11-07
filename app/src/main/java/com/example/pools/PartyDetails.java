@@ -97,6 +97,8 @@ public class PartyDetails extends AppCompatActivity implements RatingDialogListe
 
 
 
+
+
         addToCartButton = (Button)findViewById(R.id.btnAddToCart);
         party_description = (TextView)findViewById(R.id.party_description);
         party_name = (TextView)findViewById(R.id.party_name);
@@ -110,6 +112,14 @@ public class PartyDetails extends AppCompatActivity implements RatingDialogListe
         collapsingToolbarLayout = (CollapsingToolbarLayout)findViewById(R.id.collapsing);
         collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.ExpandedAppbar);
         collapsingToolbarLayout.setCollapsedTitleTextAppearance(R.style.CollapsingAppbar);
+
+        party_mapLoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent i = new Intent(PartyDetails.this,MapsActivity.class);
+               startActivity(i);
+            }
+        });
 
 
         getProductDetails(partyId);
